@@ -1,3 +1,3 @@
-# My Awesome Book
+# 我的学习笔记
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+记录一些我知道的知识点，汇聚点滴与大家分享
