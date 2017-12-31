@@ -8,6 +8,7 @@
     - [接口](go/basic/interface.md)
     - [接口实现](go/basic/impleInterface.md)
     - [值函数和引用函数](go/basic/pointervalue.md)
+    - [值函数和引用函数赋值接口](go/basic/pointervaluetointerface.md)
     - [单例](go/basic/singleton.md)
   - [3.2 http服务](concepts/index.md)
     - [3.1 http](go/http/architecture.md)
