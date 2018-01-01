@@ -10,6 +10,7 @@
     - [值函数和引用函数](go/basic/pointervalue.md)
     - [值函数和引用函数赋值接口](go/basic/pointervaluetointerface.md)
     - [单例](go/basic/singleton.md)
+    - [File](go/basic/os-file.md)
   - [3.2 http服务](concepts/index.md)
     - [3.1 http](go/http/architecture.md)
       - [tcp入门](go/http/tcpserver入门.md)
