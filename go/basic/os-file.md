@@ -89,3 +89,13 @@ func main() {
     fmt.Println(f.Size())
 }
 ```
+补充一个通过Stat判断文件或者路径是否存在
+```go
+func PathExist(_path string) bool {
+	_, err := os.Stat(_path)
+	if err != nil && os.IsNotExist(err) {
+		return false
+	}
+	return true
+}
+```
