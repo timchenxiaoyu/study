@@ -3,7 +3,7 @@
     - [设计理念](docker/concepts.md)
   - [1.2 主要概念](docker/index.md)
 - [3. golnag](concepts/go.md)
-  - [3.1 golnag基础](go/http/architecture.md)
+  - 3.1 golnag基础
     - [机构体](go/basic/struct.md)
     - [接口](go/basic/interface.md)
     - [接口实现](go/basic/impleInterface.md)
@@ -11,11 +11,11 @@
     - [值函数和引用函数赋值接口](go/basic/pointervaluetointerface.md)
     - [单例](go/basic/singleton.md)
     - [File](go/basic/os-file.md)
-  - [3.2 http服务]
+  - 3.2 http服务
      - [tcp入门](go/http/tcpserver入门.md)
      - [http入门](go/http/httpserver入门.md)
      - [httphandle](go/http/httpserverhandle.md)
-  - [3.3 golnag进阶]
+  - 3.3 golang进阶
      - [状态机](go/highlevel/sm.md)
      - [sha加密](go/highlevel/sha.md)
 - [2. java](java/chapter2.md)
