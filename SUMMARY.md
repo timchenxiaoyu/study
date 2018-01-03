@@ -33,7 +33,7 @@
   - [2.2 namespaces](concepts/namespace.md)
     - [简介](linux/namespace/namespace.md)
   - [2.2 cgroup](concepts/cgroup.md)
-    - [简介](linux/namespace/namespace.md)
+    - [简介](linux/cgroup/cgroup.md)
   - [2.3 系统](concepts/maven.md)
     - [降级内核](linux/os/downgrade.md)
     - [sudo](linux/shell/sudo.md)    
