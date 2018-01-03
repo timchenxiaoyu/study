@@ -13,7 +13,8 @@ hierarchy（层级树）：hierarchy由一系列cgroup以一个树状结构排�
 
 
 同一个hierarchy可以附加一个或多个subsystem。如下图1，cpu和memory的subsystem附加到了一个hierarchy。
-[同一个hierarchy可以附加一个或多个subsystem](../../images/pic1.png)
+
+![同一个hierarchy可以附加一个或多个subsystem](../../images/pic1.png)
 
 
 ```go
