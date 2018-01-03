@@ -12,5 +12,40 @@ hierarchy（层级树）：hierarchy由一系列cgroup以一个树状结构排�
 
 
 
-
+同一个hierarchy可以附加一个或多个subsystem。如下图1，cpu和memory的subsystem附加到了一个hierarchy。
 [同一个hierarchy可以附加一个或多个subsystem](../../images/pic1.png)
+
+
+```go
+apt-get install cgroup-bin
+
+查看所以的cgroup
+lscgroup
+cpuset:/
+cpu:/
+cpuacct:/
+memory:/
+devices:/
+freezer:/
+blkio:/
+perf_event:/
+hugetlb:/
+
+```
+查看所以支持的子系统
+```go
+lssubsys -a
+cpuset
+cpu
+cpuacct
+memory
+devices
+freezer
+blkio
+perf_event
+hugetlb
+
+```
+
+查看所有子系统挂载的位置  lssubsys –m
+查看单个子系统（如memory）挂载位置：lssubsys –m memory
