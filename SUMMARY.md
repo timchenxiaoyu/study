@@ -3,7 +3,7 @@
     - [设计理念](docker/concepts.md)
   - [1.2 主要概念](docker/index.md)
 - [3. golnag](concepts/go.md)
-  - 3.1 golnag基础
+  - 3.1 [golnag基础](go/basic/install.md)
     - [机构体](go/basic/struct.md)
     - [接口](go/basic/interface.md)
     - [接口实现](go/basic/impleInterface.md)
