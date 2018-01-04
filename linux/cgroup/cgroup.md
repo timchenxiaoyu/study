@@ -49,4 +49,5 @@ hugetlb
 ```
 
 查看所有子系统挂载的位置  lssubsys –m
+
 查看单个子系统（如memory）挂载位置：lssubsys –m memory
