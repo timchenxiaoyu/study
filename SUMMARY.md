@@ -1,7 +1,8 @@
 - [1. docker](docker/chapter.md)
   - [1.1 架构原理](docker/architecture.md)
     - [设计理念](docker/concepts.md)
-  - [1.2 主要概念](docker/index.md)
+  - [1.2 实践](docker/index.md)
+    - [日志](docker/use/log.md)
 - [3. golnag](concepts/go.md)
   - 3.1 [golnag基础](go/basic/install.md)
     - [机构体](go/basic/struct.md)
@@ -11,6 +12,9 @@
     - [值函数和引用函数赋值接口](go/basic/pointervaluetointerface.md)
     - [单例](go/basic/singleton.md)
     - [File](go/basic/os-file.md)
+    - [管道](go/basic/pipe.md)
+    - [exec](go/basic/exec.md)
+    - [标准输入输出](go/basic/std.md)
   - 3.2 http服务
      - [tcp入门](go/http/tcpserver入门.md)
      - [http入门](go/http/httpserver入门.md)
@@ -18,6 +22,8 @@
   - 3.3 golang进阶
      - [状态机](go/highlevel/sm.md)
      - [sha加密](go/highlevel/sha.md)
+  - 3.3 glide
+     - [glide](go/glide/glide.md)
 - [2. java](java/chapter2.md)
   - [2.1 maven](concepts/maven.md)
     - [安装](java/maven/install.md)
@@ -37,3 +43,6 @@
   - [2.3 系统](concepts/maven.md)
     - [降级内核](linux/os/downgrade.md)
     - [sudo](linux/shell/sudo.md)    
+    - [chroot](linux/shell/chroot.md) 
+    - [pivot_root](linux/shell/piovt_root.md) 
+    - [mount](linux/shell/mount.md) 

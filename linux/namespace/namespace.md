@@ -1,3 +1,5 @@
+Linux使用namespace来表示从不同进程角度所见的视图。 不同的namespace的进程看到的资源或者进程表是不一样的，相同namespace中的不同进程看到的是同样的资源。
+
 Linux内核中就提供了这六种namespace隔离的系统调用，如下表所示。
 
 | Namespace | 系统调用参数 | 隔离内容 |
