@@ -2,7 +2,7 @@
 
 ### 安装
 ```go
- go install github.com/Masterminds/glide
+ go get github.com/Masterminds/glide
 ```
 
 ### 初始化
