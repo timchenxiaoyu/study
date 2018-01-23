@@ -29,10 +29,10 @@
 sql列表，sql堆叠图、数据库响应时间曲线图、慢SQL追踪列表
 
 ### NOSQL
-sql列表，sql堆叠图、数据库响应时间曲线图
+memcached、reids、mongodb
 
 ### MQ
-memcached、reids、mongodb
+rabbitmq、JMS、ActiveMQ
 
 ### 外部应用
 http、thrift、dubbo、webservice
