@@ -1,6 +1,7 @@
 JSON
 
 这里需要注意，这里的Namespace需要大写，不然是无法序列化的
+还有就是字符串里面servers还是SErvers，大小写都没有关系
 ```go
 func main() {
 
@@ -26,3 +27,5 @@ func main() {
 	fmt.Println(s)
 }
 ```
+
+* Marshal 是把结构体转成[]byte，Unmarshal则是反过来把[]byte转成结构体

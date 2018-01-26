@@ -115,3 +115,26 @@ func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 
 ```
 截获请求，调用不同修改方法，自定义请求！
+
+
+
+
+
+## GET
+
+```go
+req, err := http.NewRequest("GET", "url", nil)
+```
+
+## POST
+```go
+data, err := json.Marshal(struct)
+//或者
+str := `{"a":"b"}`
+date = []byte(str)
+req, err := http.NewRequest("POST", url, bytes.NewReader(data))
+```
+设置请求头
+```go
+req.Header.Set("Authorization", "token ltguvneekiynjbdsijmzmyarjovgycygxjqcfaigkejpobpj")
+```
