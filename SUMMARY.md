@@ -40,6 +40,7 @@
     - [管道](go/basic/pipe.md)
     - [exec](go/basic/exec.md)
     - [标准输入输出](go/basic/std.md)
+    - [读取文件](go/basic/读取文件.md)
   - 3.2 http服务
      - [tcp入门](go/http/tcpserver入门.md)
      - [http入门](go/http/httpserver入门.md)
