@@ -9,7 +9,7 @@
 
 
 
-|Job类型|	使用示例|	行为	|completions	|Parallelism
+|Job类型|	使用示例|	行为	|completions	|Parallelism|
 | :------:| :------: | :------: | :------: | :------: |
 |一次性Job|	数据库迁移|	创建一个Pod直至其成功结束|	1|	1|
 |固定结束次数的Job|	处理工作队列的Pod|	依次创建一个Pod运行直至completions个成功结束	|2+|	1|
