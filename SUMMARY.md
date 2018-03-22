@@ -69,6 +69,7 @@
     - [cert认证](kubernetes/arch/cert认证.md)
   - [2.2 使用](kubernetes/use/kubeconfig.md)
     - [kubeconfig](kubernetes/use/kubeconfig.md)
+    - [job](kubernetes/use/job.md)
 - [2. linux](java/chapter2.md)
   - [2.1 shell](concepts/maven.md)
     - [while](linux/shell/while.md)
