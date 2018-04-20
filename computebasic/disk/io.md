@@ -1,0 +1,1 @@
+![内核io结构](images/IO_stack_of_the_Linux_kernel.svg)
