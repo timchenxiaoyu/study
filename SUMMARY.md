@@ -80,6 +80,7 @@
      - [优化](go/highlevel/优化.md)
      - [实现lru](go/highlevel/实现lru.md)
      - [并发md5](go/highlevel/并发md5.md)
+     - [统计词频](go/highlevel/统计词频.md)
   - 3.3 glide
      - [glide](go/glide/glide.md)
 - [2. java](java/chapter2.md)
