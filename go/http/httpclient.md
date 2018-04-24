@@ -123,7 +123,20 @@ func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 ## GET
 
 ```go
-req, err := http.NewRequest("GET", "url", nil)
+func httpGet() {
+    resp, err := http.Get("http://www.01happy.com/demo/accept.php?id=1")
+    if err != nil {
+        // handle error
+    }
+ 
+    defer resp.Body.Close()
+    body, err := ioutil.ReadAll(resp.Body)
+    if err != nil {
+        // handle error
+    }
+ 
+    fmt.Println(string(body))
+}
 ```
 
 ## POST
@@ -133,6 +146,25 @@ data, err := json.Marshal(struct)
 str := `{"a":"b"}`
 date = []byte(str)
 req, err := http.NewRequest("POST", url, bytes.NewReader(data))
+
+
+func httpPost() {
+    resp, err := http.Post("http://www.01happy.com/demo/accept.php",
+        "application/x-www-form-urlencoded",
+        strings.NewReader("name=cjb"))
+    if err != nil {
+        fmt.Println(err)
+    }
+ 
+    defer resp.Body.Close()
+    body, err := ioutil.ReadAll(resp.Body)
+    if err != nil {
+        // handle error
+    }
+ 
+    fmt.Println(string(body))
+}
+
 ```
 设置请求头
 ```go
