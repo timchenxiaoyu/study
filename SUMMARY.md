@@ -81,8 +81,10 @@
      - [实现lru](go/highlevel/实现lru.md)
      - [并发md5](go/highlevel/并发md5.md)
      - [统计词频](go/highlevel/统计词频.md)
-  - 3.3 glide
+  - 3.4 glide
      - [glide](go/glide/glide.md)
+  - 3.5 test
+     - [glide](go/test/test.md)     
 - [2. java](java/chapter2.md)
   - [2.1 maven](concepts/maven.md)
     - [安装](java/maven/install.md)
