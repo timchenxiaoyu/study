@@ -76,3 +76,17 @@ func main() {
 	fmt.Println(string(byte))
 }
 ```
+
+
+## 文件服务器
+如果要实现文件服务器的上传和下载需要通过
+```go
+io.copy(conn,file)
+```
+和
+
+```go
+r := bufio.newRead(conn)
+io.copy(file,r)
+```
+尤其是上传部分部分一定要使用缓冲流

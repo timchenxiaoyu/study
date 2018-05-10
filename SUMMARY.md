@@ -67,6 +67,11 @@
     - [time](go/basic/time.md)
     - [waitgroup](go/basic/waitgroup.md)
     - [写文件](go/basic/写文件.md)
+    - [并发map](go/basic/并发map.md)
+    - [chan](go/basic/chan.md)
+    - [path](go/basic/path.md)
+    - [string.](go/basic/strings.md)
+    - [url.](go/basic/url.md)
     - [并发map.](go/basic/并发map..md)
   - 3.2 http服务
      - [tcp入门](go/http/tcpserver入门.md)
@@ -81,6 +86,7 @@
      - [实现lru](go/highlevel/实现lru.md)
      - [并发md5](go/highlevel/并发md5.md)
      - [统计词频](go/highlevel/统计词频.md)
+     - [装饰器](go/highlevel/装饰器.md)
   - 3.4 glide
      - [glide](go/glide/glide.md)
   - 3.5 test

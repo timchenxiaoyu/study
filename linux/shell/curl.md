@@ -25,3 +25,9 @@ data.json内容如下
 }
 
 ```
+
+
+### 上传文件
+```go
+curl -F "uploadfile=@C:\Users\wangs\Desktop\xueba_license.txt" localhost:8080/upload
+```

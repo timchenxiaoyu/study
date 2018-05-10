@@ -121,3 +121,90 @@ func main() {
 	http.ListenAndServe(":8080", mux)
 }
 ```
+
+## 深入理解
+
+### HandleFunc
+
+HandleFunc需要传入的是一个函数 
+```go
+handler func(ResponseWriter, *Request)
+```
+并把它放到DefaultServeMux里面，二所谓的HandlerFunc就是这个方法的别名
+```go
+type HandlerFunc func(ResponseWriter, *Request)
+```
+
+所以如果想实现级联就只需要对原理的方法进行包装就可以了，譬如
+```go
+http.HandleFunc("/say",NeedLogin(say))
+...
+func NeedLogin(h http.HandlerFunc) http.HandlerFunc{
+	return func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("get request")
+		h(w,r)
+	}
+}
+```
+这样就可以在线执行NeedLogin方法了，上面的h就是say。执行完NeedLogin再去执行h方法。
+
+### Handle
+```go
+http.ListenAndServe(":9999",r)
+```
+这个方法需要传入的是Handler,而Handler又是什么呢？它是一个接口，实现了ServeHTTP的一个接口
+```go
+type Handler interface {
+	ServeHTTP(ResponseWriter, *Request)
+}
+```
+那么只要是实现了它的接口都可以放入，上文已经举例说明了
+
+那么如果你想实现级联，同样可以
+
+```go
+type Counter struct {
+	count map[string]int
+	h   http.Handler
+}
+
+func NewCounter(h http.Handler) *Counter{
+	return &Counter{
+		h :h,
+		count: make(map[string]int ),
+	}
+}
+
+func (c *Counter)ServeHTTP(w http.ResponseWriter, r *http.Request){
+	c.count[r.URL.Path]++
+	c.h.ServeHTTP(w,r)
+}
+//----------------------------------------------//
+
+type Recorder struct {
+	h   http.Handler
+}
+
+func NewRecoder(h http.Handler) *Recorder{
+	return &Recorder{
+		h :h,
+
+	}
+}
+
+func (c *Recorder)ServeHTTP(w http.ResponseWriter, r *http.Request){
+	fmt.Println("record ", r.URL.Path)
+	c.h.ServeHTTP(w,r)
+}
+
+
+//------------------------------------------------//
+//h := handlers.LoggingHandler(os.Stderr,http.DefaultServeMux)
+	c := NewCounter(http.DefaultServeMux)//this switch http.DefaultServeMux to h is ok,add log feature
+	r := NewRecoder(c)
+
+	http.ListenAndServe(":9999",r)
+```
+
+上面通过层层包装先是NewCounter、然后NewRecoder，这样在调用9999端口的这个服务的时候都会先执行上面两个方法
+

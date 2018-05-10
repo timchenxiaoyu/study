@@ -85,3 +85,25 @@ hehe.
 $ curl 127.0.0.1:8080
 Men would stop talking and women would shed tears when they see this.
 ```
+
+
+## 文件服务器
+```go
+func upload(w http.ResponseWriter, r *http.Request) {
+    r.ParseForm()
+    if r.Method == "GET" {
+        t, err := template.ParseFiles("upload.gptl")
+        checkErr(err)
+        t.Execute(w, nil)
+    } else {
+        file, handle, err := r.FormFile("file")
+        checkErr(err)
+        f, err := os.OpenFile("./test/"+handle.Filename, os.O_WRONLY|os.O_CREATE, 0666)
+        io.Copy(f, file)
+        checkErr(err)
+        defer f.Close()
+        defer file.Close()
+        fmt.Println("upload success")
+    }
+}
+```
