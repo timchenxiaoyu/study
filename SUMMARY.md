@@ -108,6 +108,7 @@
     - [job](kubernetes/use/job.md)
     - [nfs](kubernetes/use/nfs.md)
     - [heapster](kubernetes/use/heapster.md)
+    - [优雅关闭](kubernetes/use/gracekill.md)
 - [2. linux](java/chapter2.md)
   - [2.1 shell](concepts/maven.md)
     - [while](linux/shell/while.md)
