@@ -72,7 +72,9 @@
     - [path](go/basic/path.md)
     - [string.](go/basic/strings.md)
     - [url.](go/basic/url.md)
-    - [并发map.](go/basic/并发map..md)
+    - [并发](go/basic/并发m.md)
+    - [同步](go/basic/同步.md)
+    - [unsafe](go/basic/unsafe.md)
   - 3.2 http服务
      - [tcp入门](go/http/tcpserver入门.md)
      - [http入门](go/http/httpserver入门.md)

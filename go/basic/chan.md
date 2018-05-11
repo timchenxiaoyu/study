@@ -30,5 +30,18 @@ sbc true
  false
  false
 ```
-当然写入会报错。
+当然写入报错。
 
+## 长度
+
+```go
+    ch := make(chan int ,100)
+	ch <-1
+	ch<-1
+	fmt.Println(len(ch),cap(ch))
+```
+输出的结果是：
+```go
+2 100
+```
+长度是里面元素的个数，cap是容量，只有容量超的时候才会阻塞

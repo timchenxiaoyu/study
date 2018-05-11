@@ -170,3 +170,34 @@ func httpPost() {
 ```go
 req.Header.Set("Authorization", "token ltguvneekiynjbdsijmzmyarjovgycygxjqcfaigkejpobpj")
 ```
+
+例如：
+```go
+func SendGet(url string)([]byte, error){
+	resp, err := http.Get(url)
+	if err != nil{
+		return nil, err
+	}
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil{
+		return nil, err
+	}
+	return body, nil
+}
+
+
+func SendPost(url string,req []byte)([]byte, error){
+	body_type := "application/json;charset=utf-8"
+	resp, err := http.Post(url, body_type, bytes.NewBuffer(req))
+	if err != nil{
+		return nil, err
+	}
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil{
+		return nil, err
+	}
+	return body, nil
+}
+```
