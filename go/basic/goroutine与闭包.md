@@ -121,3 +121,28 @@ func main() {
 
 ```
 这样就可以得到上面相同的输出了。
+
+在针对闭包举个例子
+```
+package main
+
+import "fmt"
+
+func Finb() func() int{
+	a ,b := 0, 1
+	return func() int {
+		a, b = b, a+ b
+		return b
+	}
+}
+
+func main() {
+	f := Finb()
+	fmt.Println(f())
+	fmt.Println(f())
+	fmt.Println(f())
+	fmt.Println(f())
+}
+```
+通过闭包打印斐波拉切数列。这个里面第一次调用Finb，初始化a和b之后的调用都是在围绕这个
+a和b的，都是直接修改的a和b。

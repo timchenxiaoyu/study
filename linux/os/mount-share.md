@@ -238,7 +238,7 @@ cat /proc/self/mountinfo |grep disk | sed 's/ - .*//'
 
 ```
 文件是不共享的
-此时协助disk3会导致bind1和disk1下的都会卸载
+此时卸载disk3会导致bind1和disk1下的都会卸载
 ```
 #  cat /proc/self/mountinfo |grep disk3 | sed 's/ - .*//'
 102 94 7:2 / /home/ubuntu/testmount/disks/disk1/disk3 rw,relatime shared:82

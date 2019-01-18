@@ -2,9 +2,9 @@
 ## 安装GO
 
 先下载二进制包
-https://redirector.gvt1.com/edgedl/go/go$VERSION.$OS-$ARCH.tar.gz
+
 eg:
-wget https://redirector.gvt1.com/edgedl/go/go1.8.1.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz
 
 ```go
 #解压

@@ -45,3 +45,48 @@ sbc true
 2 100
 ```
 长度是里面元素的个数，cap是容量，只有容量超的时候才会阻塞
+
+下面的代码是有问题，协程是没法停止的
+```
+package main
+
+import (
+	"time"
+	"fmt"
+	"runtime"
+)
+
+func main() {
+
+	ch := make(chan int)
+	go func() {
+		time.Sleep(time.Second*6)
+		ch <-1
+	}()
+
+
+	select {
+	case <- ch:
+		fmt.Println("over")
+	case <- time.After(3*time.Second):
+		fmt.Println("timeout")
+
+	}
+
+	for{
+		time.Sleep(time.Second *1)
+		fmt.Println(runtime.NumGoroutine())
+	}
+
+}
+
+func app(s *[]byte){
+	*s = append(*s,'d','e','f')
+}
+```
+在程序协程执行完由于管道没有空间会一直阻塞，协程会卡住
+需要将代码如下修改
+```
+	ch := make(chan int,1)
+```
+这个在编程的时候容易忽视
